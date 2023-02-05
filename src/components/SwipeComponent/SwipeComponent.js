@@ -12,6 +12,7 @@ import {
 } from 'reactstrap';
 import "./SwipeComponent.css";
 import ListComponent from 'components/ListComponent/ListComponent';
+import { Link } from "react-router-dom";
 
 const cards = [
   {
@@ -89,7 +90,6 @@ export default function SwipeComponent() {
   const [ action, setAction ] = useState("");
 
 
-  // const dummyArr = [];
   return (
     <>
     <div className="cardContainer">
@@ -161,6 +161,18 @@ export default function SwipeComponent() {
             // console.log(element)
           })
         : null}
+
+        
+        <Link to={{pathname: "/HousesDisliked", dislikedArray: dislikedCardsArray}}>
+          <Button
+            className="btn-simple"
+            color="primary"
+            style={{margin: "200px"}}>
+            Click to view disliked houses
+            <i className="tim-icons icon-minimal-right" />
+          </Button>
+          
+        </Link>
       </div>
 
     </div>    
