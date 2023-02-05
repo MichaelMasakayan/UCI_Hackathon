@@ -1,24 +1,44 @@
 import { useState, useEffect } from 'react';
 import TinderCard from 'react-tinder-card';
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  CardText,
+  Col,
+  Row
+} from 'reactstrap';
 import "./SwipeComponent.css";
 
 const cards = [
   {
-    image: require("assets/img/house1/house1pict1.png"),
-    color: '#55ccff',
+    image: require('assets/img/house1/house1pict1.png'),
+    price: '$850,000',
     zIndex: 1,
+    bedNum: 3,
+    bathNum: 2,
+    sqFt: 1050,
+    date: '05/04/2023',
   },
   {
-    image: require("assets/img/house1/house1pict2.png"),
-    color: '#e8e8e8',
+    image: require('assets/img/house1/house1pict2.png'),
+    price: '$5,300,900',
     zIndex: 2,
+    bedNum: 4,
+    bathNum: 5.5,
+    sqFt: 1557,
+    date: '05/10/2023',
   },
   {
-    image: require("assets/img/house1/house1pict3.png"),
-    color: '#0a043c',
+    image: require('assets/img/house1/house1pict3.png'),
+    price: '$500,500',
     zIndex: 3,
-  },
-
+    bedNum: 1,
+    bathNum: 1.5,
+    sqFt: 550,
+    date: '05/03/2023',
+  }
 ];
 
 
@@ -63,9 +83,6 @@ export default function SwipeComponent() {
     <div className="cardContainer">
       <link href='https://fonts.googleapis.com/css?family=Damion&display=swap' rel='stylesheet' />
       <link href='https://fonts.googleapis.com/css?family=Alatsi&display=swap' rel='stylesheet' />
-      {/* <TinderCard className="swipe-container" onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['right', 'left']}>Hello, World!</TinderCard>
-      <TinderCard className="swipe-container" onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['right', 'left']}>Hello, World!</TinderCard>
-      <TinderCard className="swipe-container" onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['right', 'left']}>Hello, World!</TinderCard> */}
       <div className="swipe-container">
 
       {Array.isArray(cardsArray)
@@ -78,37 +95,48 @@ export default function SwipeComponent() {
 
         {cards.map((card, index) =>
           <TinderCard className='swipe' key={cards.image} onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} >
-            <div style={{ backgroundImage: 'url(' + card.image + ')', position:'relative'  }} className='card'>
-              <img 
-                src={card.image}
-                key={card.image}
-                alt={`Image ${index + 1}`}
-                style=
-                  {{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    opacity: 1,
-                    transition: "opacity 0.5s ease-out"
-                  }}>
-              </img>
-            </div>
-            
+            <Card style={{ width: '30rem', height: '35rem', position: 'absolute' }}>
+                <img 
+                  src={card.image}
+                  key={card.image}
+                  alt={`Image ${index + 1}`}
+                  style={{ height: '25rem' }}>
+                </img>
+              <CardBody>
+                <CardTitle tag={'h2'} style={{ marginBottom: 20 }}>
+                  <Row>
+                    <Col>
+                    {card.price}
+                    </Col>
+                    <Col className='text-right'>
+                    OH: {card.date}
+                    </Col>
+                  </Row>
+                </CardTitle>
+                <CardSubtitle
+                  className="mb-2 text-muted"
+                  tag="h6"
+                >
+                  <Row>
+                    <Col>
+                    Bedrooms: {card.bedNum}
+                    </Col>
+                    <Col>
+                    Bathrooms: {card.bathNum}
+                    </Col>
+                    <Col>
+                    Sq Ft: {card.sqFt}
+                    </Col>
+                  </Row>
+                </CardSubtitle>
+                <CardText>
+                  Some quick example text to build on the card title and make up the bulk of the card‘s content.
+                </CardText>
+              </CardBody>
+            </Card>
           </TinderCard>
         )}
       </div>
-
-      {/* <TinderCard className='swipe' key={cards[0].image} onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} >
-        <div style={{ backgroundImage: 'url(' + cards[0].image + ')' }} className='card'>
-          <h3>{cards[0].image}</h3>
-        </div>
-      </TinderCard>
-
-      <TinderCard className="swipe" onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['up', 'down']} flickOnSwipe={true}><img src={cards[1].image} alt="Logo" /></TinderCard> */}
-      {/* {action} */}
-      {/* {cardsArray} */}
     </div>
   </>
   )
