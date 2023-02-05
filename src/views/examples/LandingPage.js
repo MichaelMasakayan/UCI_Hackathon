@@ -38,6 +38,7 @@ import HomeNavbar from "components/Navbars/HomeNavbar.js";
 import Footer from "components/Footer/Footer.js";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import { Link } from 'react-router-dom';
+import ProfilePageCarolInCard from "views/examples/ProfilePageCarolInCard.js";
 
 export default function LandingPage() {
   React.useEffect(() => {
@@ -91,17 +92,13 @@ export default function LandingPage() {
                 </h1>
                 
                 <div className="btn-wrapper mb-3">
-                <Link to="/ProfilePageCarolInCard">
-                  <Button 
-                    className="btn-simple" 
+                  <Button
+                    className="btn-simple"
                     color="primary"
-                    // href="/ProfilePageCarolInCard"
-                    onClick={(e) => e.preventDefault()}
-                    >
+                    href="http://localhost:3000/ProfilePageCarolInCard">
                     Find An Open House Near You!
                     <i className="tim-icons icon-minimal-right" />
                   </Button>
-                </Link>
                 </div>
                 <div className="btn-wrapper">
                   <div className="button-container">

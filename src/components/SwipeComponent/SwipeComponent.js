@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
 import TinderCard from 'react-tinder-card';
 import {
   Card,
@@ -7,7 +7,8 @@ import {
   CardSubtitle,
   CardText,
   Col,
-  Row
+  Row,
+  Button,
 } from 'reactstrap';
 import "./SwipeComponent.css";
 import ListComponent from 'components/ListComponent/ListComponent';
@@ -51,6 +52,7 @@ const cards = [
 
 export default function SwipeComponent() {
   const [ cardsArray, setCardsArray ] = useState([]);
+  const [ dislikedCardsArray, setDislikedCardsArray ] = useState([]);
   const [currCard, setCurrCard] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [dummyArr, setDummyArr] = useState([]);
@@ -72,8 +74,12 @@ export default function SwipeComponent() {
     setAction(direction)
     if (direction === "right" ){
       setCardsArray((direction) => [...cardsArray, "House " + String(counter)]);
-      setCounter(counter + 1);
+    } else {
+      setDislikedCardsArray((direction) => [...dislikedCardsArray, "House " + String(counter)])
     }
+
+    // Increment counter by 1
+    setCounter(counter + 1);
   }
   
   const onCardLeftScreen = (myIdentifier) => {
@@ -156,10 +162,9 @@ export default function SwipeComponent() {
           })
         : null}
       </div>
-    </div>
-    
 
-    {/* <ListComponent houseName="House 1" /> */}
+    </div>    
+    
   </>
   )
 }
