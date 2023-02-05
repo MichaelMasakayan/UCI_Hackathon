@@ -30,7 +30,7 @@ import ProfilePage from "views/examples/ProfilePage.js";
 // adds the new page
 import ProfilePage1 from "views/examples/ProfilePage1.js";
 import ProfilePageCarolInCard from "views/examples/ProfilePageCarolInCard.js";
-
+import ListPage from "views/examples/ListPage.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -58,6 +58,10 @@ root.render(
         <Route
         path="/ProfilePageCarolInCard" 
         render={(props) => <ProfilePageCarolInCard {...props} />}
+      />
+           <Route
+        path="/ListPage" 
+        render={(props) => <ListPage {...props} />}
       />
 
       <Redirect from="/" to="/components" />
