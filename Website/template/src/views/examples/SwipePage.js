@@ -34,12 +34,12 @@ import {
 } from "reactstrap";
 
 // core components
-import HomeNavbar from "components/Navbars/HomeNavbar.js";
+import AppNavbar from "components/Navbars/AppNavbar.js";
 import Footer from "components/Footer/Footer.js";
 
 import bigChartData from "variables/charts.js";
 
-export default function LandingPage() {
+export default function SwipePage() {
   React.useEffect(() => {
     document.body.classList.toggle("landing-page");
     // Specify how to clean up after this effect:
@@ -49,7 +49,7 @@ export default function LandingPage() {
   }, []);
   return (
     <>
-      <HomeNavbar />
+      <AppNavbar />
       <div className="wrapper">
         <div className="page-header">
           <img

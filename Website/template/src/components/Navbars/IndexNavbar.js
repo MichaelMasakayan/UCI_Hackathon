@@ -186,6 +186,10 @@ export default function IndexNavbar() {
                   <i className="tim-icons icon-single-02" />
                   Profile Page
                 </DropdownItem>
+                <DropdownItem tag={Link} to="/swipe-page">
+                  <i className="tim-icons icon-image-02" />
+                  Testing Page
+                </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
