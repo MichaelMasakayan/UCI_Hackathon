@@ -28,9 +28,10 @@ import LandingPage from "views/examples/LandingPage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 // adds the new page
-import ProfilePage1 from "views/examples/ProfilePage1.js";
+import HouseDescription from "views/examples/HouseDescription.js";
 import ProfilePageCarolInCard from "views/examples/ProfilePageCarolInCard.js";
 import SwipePage from "views/examples/SwipePage";
+import ListPage from "views/examples/ListPage.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -52,8 +53,8 @@ root.render(
       />
       {/* this wil add pages */}
         <Route
-        path="/profile-page1"
-        render={(props) => <ProfilePage1 {...props} />}
+        path="/HouseDescription"
+        render={(props) => <HouseDescription {...props} />}
       />
 
         <Route
@@ -63,6 +64,10 @@ root.render(
       <Route
         path="/swipe-page"
         render={(props) => <SwipePage {...props} />}
+      />
+       <Route
+        path="/ListPage" 
+        render={(props) => <ListPage {...props} />}
       />
       <Redirect from="/" to="/components" />
     </Switch>
