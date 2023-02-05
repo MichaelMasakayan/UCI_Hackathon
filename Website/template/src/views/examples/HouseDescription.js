@@ -74,7 +74,7 @@ const carouselItems = [
   
 let ps = null;
 
-export default function ProfilePage1() {
+export default function HouseDescription() {
   const [iconTabs, setIconsTabs] = React.useState(1);
   const [textTabs, setTextTabs] = React.useState(4);
   const [tabs, setTabs] = React.useState(1);
