@@ -49,9 +49,11 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import Footer from "components/Footer/Footer.js";
 const carouselItems = [
   {
+    
     src: require("assets/img/house1/house1pict1.png"),
     altText: "Slide 1",
     caption: ""
+    
   },
   {
     src: require("assets/img/house1/house1pict2.png"),
@@ -125,30 +127,31 @@ export default function ProfilePage1() {
           </div> */}
           
           <Row>
-          <Col lg="6">
+            {/* md is the size of the column */}
+          <Col class="col align-self-start"lg="6">
               <UncontrolledCarousel
                 items={carouselItems}
                 indicators={false}
                 autoPlay={false}
-                
               />
             </Col>
-            <Col >
+            
+            {/* <Col class="col align-self-end ">
               <h1 className="text-white font-weight-light">
                 Bootstrap carousel
               </h1>
-            <h5>Price: </h5>
+            <h5>Price: </h5> 
             <h5>Address: </h5>
             <h5>Address: </h5>
             <div className="">
-                <span>Description:</span>
-                <blockquote>
-                  <p className="blockquote">
-                    "We're pleased to present the opportunity to acquire a gem in highly demanded Irvine, CA. " <br />
-                    <br />
-                    <small>- home owner</small>
-                  </p>
-                </blockquote>
+                <span >Description: </span>
+              <div class="card text-center" >
+                <div class="card-body" style={{background: "#adb5bd"}} >
+                  <p class="card-text" >We're pleased to present the opportunity to acquire a gem in highly demanded Irvine, CA.</p>
+                  
+                  <button class="btn btn-primary">Text</button>
+                </div>
+              </div>
               </div>
               <Button
                 className="mt-5"
@@ -157,7 +160,37 @@ export default function ProfilePage1() {
                 See all components
               </Button>
             </Col>
-          
+           */}
+           <Col className="col align-self-end">
+  <Card style={{padding:15}}>
+  <h1 className="text-white font-weight-light">Bootstrap carousel</h1>
+  <Row className="align-items-center ">
+    <Col xs={6}>
+      <h5>Price: </h5> 
+    </Col>
+    <Col xs={6}>
+      <h5>Date: </h5>
+    </Col>
+  </Row>
+  <Row  className="align-items-center"  style={{paddingTop:10}}>
+    <Col xs={6}>
+      <h5>Address: </h5>
+    </Col>
+  </Row>
+  <div className="">
+    <span>Description: </span>
+    <div >
+      <div>
+        <p >We're pleased to present the opportunity to acquire a gem in highly demanded Irvine, CA.</p>
+       <div> 
+        <button className="btn btn-primary" >Text</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </Card>
+</Col>
           </Row>
         </Container>
         
@@ -166,13 +199,8 @@ export default function ProfilePage1() {
           </Container>
       </div>
         </div>
-        <div className="section section-tabs">
- 
-      
-    </div>
         <Footer />
       </div>
-      
      
     </>
 
