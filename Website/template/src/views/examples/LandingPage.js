@@ -89,7 +89,9 @@ export default function LandingPage() {
                   OpenHouse <br />
                   {/*<span className="text-white">We'll Leave the Door Open</span>*/}
                 </h1>
+                
                 <div className="btn-wrapper mb-3">
+                {/*
                   <p className="category text-success d-inline">
                     From 9.99%/mo
                   </p>  ADD BUTTON HERE
@@ -101,7 +103,18 @@ export default function LandingPage() {
                     size="sm"
                   >
                     <i className="tim-icons icon-minimal-right" />
+                  </Button>   
+
+                  ********* END UNNECESSARY FEATURES ********* */}
+                  <Button 
+                    className="btn-simple" 
+                    color="primary"
+                    href="#pablo"
+                    >
+                    Try It Out!
+                  
                   </Button>
+
                 </div>
                 <div className="btn-wrapper">
                   <div className="button-container">
