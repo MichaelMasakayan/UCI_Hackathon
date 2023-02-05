@@ -112,7 +112,8 @@ export default function ProfilePage1() {
             Click to view disliked houses
             <i className="tim-icons icon-minimal-right" />
           </Button>
-              
+                        <div>  <Button color="info" style={{fontSize: '0.8em', width: '10em', height: '3em', padding: '0.5em', marginTop: "95%", }} onClick={console.log("clicked ")} href="http://localhost:3000/HouseDescription">More Info</Button></div>
+
             </div>
           </div>
       </div>

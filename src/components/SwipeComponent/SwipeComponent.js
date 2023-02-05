@@ -201,7 +201,6 @@ export default function SwipeComponent() {
 
     // Increment counter by 1
     setCounter(counter + 1);
-    
   }
   
   const onCardLeftScreen = (myIdentifier) => {
@@ -256,6 +255,7 @@ export default function SwipeComponent() {
           </TinderCard>
           
         )}
+      
         <Button color="info" style={{fontSize: '0.8em', width: '10em', height: '3em', padding: '0.5em', marginTop: "95%", }} onClick={console.log("clicked ")} href="http://localhost:3000/HouseDescription">More Info</Button>
       </div>
       <div className="list-container">
@@ -278,6 +278,8 @@ export default function SwipeComponent() {
             Click to view disliked houses
             <i className="tim-icons icon-minimal-right" />
           </Button>
+                    <div>  <Button color="info" style={{fontSize: '0.8em', width: '10em', height: '3em', padding: '0.5em', marginTop: "95%", }} onClick={console.log("clicked ")} href="http://localhost:3000/HouseDescription">More Info</Button></div>
+
           
         </Link>
       </div>

@@ -45,7 +45,7 @@ import {
 import Tabs from "views/IndexSections/Tabs.js";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+import AppNavbar from "components/Navbars/AppNavbar.js";
 import Footer from "components/Footer/Footer.js";
 const carouselItems = [
   {
@@ -100,7 +100,7 @@ export default function HouseDescription() {
   }, []);
   return (
     <>
-      <ExamplesNavbar />
+     <AppNavbar />
       <div className="wrapper">
         <div className="page-header " >
           <img
@@ -147,14 +147,20 @@ export default function HouseDescription() {
       <h3>Date: 05/10/2023 </h3>
     </Col>
   </Row>
-  <Row  className="align-items-center"  style={{paddingTop:10}}>
+  <Row className="align-items-center " style={{padding:10}}>
     <Col >
-      <h5>Address: 8 Deodar, Irvine, CA 92604</h5>
+      <h6>BATHROOMS: 5.5</h6> 
+    </Col>
+    <Col >
+      <h6>BEDROOMS: 4 </h6>
+    </Col>
+    <Col >
+      <h6>SQ FT: 1557</h6>
     </Col>
   </Row>
+ 
   <div className="">
-    
-    <span>Description: </span>
+    <h3>Description: </h3>
     <div >
       <div>
         <p  style={{padding:20}}>We're pleased to present the opportunity to acquire a gem in highly demanded Irvine, CA. Open layout with view from front door to backyard. Features include wood plank floors in the entire home, quartz countertops and custom island in the kitchen, stainless steel appliances, upgraded lighting throughout the home, all bedrooms have remote controlled ceiling fans with lights, dual-pane windows with strong sound barrier and insulation.</p>
