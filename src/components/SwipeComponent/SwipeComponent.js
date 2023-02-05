@@ -255,6 +255,7 @@ export default function SwipeComponent() {
           </TinderCard>
           
         )}
+        <Button color="info" style={{fontSize: '0.8em', width: '10em', height: '3em', padding: '0.5em', marginTop: "95%", }} onClick={console.log("clicked ")} href="http://localhost:3000/HouseDescription">More Info</Button>
       </div>
       <div className="list-container">
         {Array.isArray(cardsArray)

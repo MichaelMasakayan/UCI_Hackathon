@@ -24,10 +24,11 @@ export default function ListComponent(props) {
             </ul>
           </div>
           <div className="ml-auto">
-            <Button color="info" style={{fontSize: '0.8em', width: '10em', height: '3em', padding: '0.5em'}} tag={Link} to='\HouseDescription'>Message</Button>
+            <Button color="info" style={{fontSize: '0.8em', width: '10em', height: '3em', padding: '0.5em'}} onClick={console.log("clicked ")} href="http://localhost:3000/HouseDescription">Message</Button>
           </div>
         </li>
       </ul>
+      
     </>
   )
 }
