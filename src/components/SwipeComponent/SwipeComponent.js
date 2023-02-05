@@ -17,6 +17,33 @@ import { Link } from "react-router-dom";
 
 const cards = [
   {
+    price: '$2,399,900',
+    bedNum: 4,
+    bathNum: 5.5,
+    sqFt: 1557,
+    date: '05/10/2023',
+    name: "House 2",
+    address: "5678 Oak Ave, Anytown USA 12345",
+    images: [
+      {
+        src: require("assets/img/house1/house1pict1.png"),
+        altText: "Slide 1",
+        caption: ""
+      },
+      {
+        src: require("assets/img/house1/house1pict2.png"),
+        altText: "Slide 2",
+        caption: ""
+      },
+      {
+        src: require("assets/img/house1/house1pict3.png"),
+        altText: "Slide 3",
+        caption: ""
+      }
+    ],
+    desc: 'Features include wood plank floors in the entire home, quartz countertops and custom island in the kitchen, stainless steel appliances, upgraded lighting throughout the home, all bedrooms have remote controlled ceiling fans with lights, dual-pane windows with strong sound barrier and insulation.',
+  },
+  {
     price: '$500,500',
     bedNum: 1,
     bathNum: 1.5,
@@ -48,33 +75,7 @@ const cards = [
     ],
     desc: 'Prime South Coast Metro location! Top floor corner-unit offers open floor plan graced by vaulted ceilings. This beautifully upgraded condo features two spacious en-suite bedrooms and a loft perfect for a home office or kids den. This home is meticulously maintained and turn key.',
   },
-  {
-    price: '$2,399,900',
-    bedNum: 4,
-    bathNum: 5.5,
-    sqFt: 1557,
-    date: '05/10/2023',
-    name: "House 2",
-    address: "5678 Oak Ave, Anytown USA 12345",
-    images: [
-      {
-        src: require("assets/img/house1/house1pict1.png"),
-        altText: "Slide 1",
-        caption: ""
-      },
-      {
-        src: require("assets/img/house1/house1pict2.png"),
-        altText: "Slide 2",
-        caption: ""
-      },
-      {
-        src: require("assets/img/house1/house1pict3.png"),
-        altText: "Slide 3",
-        caption: ""
-      }
-    ],
-    desc: 'Features include wood plank floors in the entire home, quartz countertops and custom island in the kitchen, stainless steel appliances, upgraded lighting throughout the home, all bedrooms have remote controlled ceiling fans with lights, dual-pane windows with strong sound barrier and insulation.',
-  },
+ 
   {
     price: '$850,000',
     bedNum: 3,
