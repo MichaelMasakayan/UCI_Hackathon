@@ -85,8 +85,9 @@ export default function LandingPage() {
           <div className="content-center">
             <Row className="row-grid justify-content-between align-items-center text-left">
               <Col lg="6" md="6">
-                <h1 className="text-white">
-                  OpenHouse <br />
+                <h1 className="text-white" style={{ fontSize: '60px', fontFamily: 'Arial, sans-serif' }}>
+
+                  Searching for a new home? <br />
                 </h1>
                 
                 <div className="btn-wrapper mb-3">
@@ -96,7 +97,7 @@ export default function LandingPage() {
                     href="#pablo"
                     onClick={(e) => e.preventDefault()}
                     >
-                    Find One Near You!
+                    Find An Open House Near You!
                     <i className="tim-icons icon-minimal-right" />
                   </Button>
 
@@ -151,17 +152,15 @@ export default function LandingPage() {
             <Row>
               <Col md="4">
                 <hr className="line-info" />
+                <div className="about-us-header">
                 <h1>
-                  <span className="text-info">About Us</span>
+                  About Us
                 </h1>
+                </div>
+                <br />
+                <br />
+
               </Col>
-              <body className="text-white mb-3">
-                  OpenHouse is an online networking application to find open houses
-                  in your neighborhood. In OpenHouse, users "swipe right" to like or 
-                  "swipe left" to dislike other users' listings, which include their
-                  photos, the date of the open house, a short bio, and a list of their 
-                  motherfucking information or whatever.
-                </body>
             </Row>
             <Row>
               <Col md="4">
@@ -170,30 +169,16 @@ export default function LandingPage() {
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={require("assets/img/bitcoin.png")}
+                      src={require("assets/img/openhouse-house.png")}
                     />
                   </CardHeader>
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Light Coin</h4>
-                        <span>Plan</span>
-                        <hr className="line-primary" />
+                        <h4 className="text-white">Learn more about the homes in your area</h4>
                       </Col>
                     </Row>
-                    <Row>
-                      <ListGroup>
-                        <ListGroupItem>50 messages</ListGroupItem>
-                        <ListGroupItem>100 emails</ListGroupItem>
-                        <ListGroupItem>24/7 Support</ListGroupItem>
-                      </ListGroup>
-                    </Row>
                   </CardBody>
-                  <CardFooter className="text-center">
-                    <Button className="btn-simple" color="primary">
-                      Get plan
-                    </Button>
-                  </CardFooter>
                 </Card>
               </Col>
               <Col md="4">
@@ -202,30 +187,16 @@ export default function LandingPage() {
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={require("assets/img/etherum.png")}
+                      src={require("assets/img/openhouse-house.png")}
                     />
                   </CardHeader>
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Dark Coin</h4>
-                        <span>Plan</span>
-                        <hr className="line-success" />
+                      <h4 className="text-white"> RSVP for open houses with a click of the button</h4>
                       </Col>
                     </Row>
-                    <Row>
-                      <ListGroup>
-                        <ListGroupItem>150 messages</ListGroupItem>
-                        <ListGroupItem>1000 emails</ListGroupItem>
-                        <ListGroupItem>24/7 Support</ListGroupItem>
-                      </ListGroup>
-                    </Row>
                   </CardBody>
-                  <CardFooter className="text-center">
-                    <Button className="btn-simple" color="success">
-                      Get plan
-                    </Button>
-                  </CardFooter>
                 </Card>
               </Col>
               <Col md="4">
@@ -234,30 +205,16 @@ export default function LandingPage() {
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={require("assets/img/ripp.png")}
+                      src={require("assets/img/openhouse-house.png")}
                     />
                   </CardHeader>
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Bright Coin</h4>
-                        <span>Plan</span>
-                        <hr className="line-info" />
+                      <h4 className="text-white">Talk to homeowners and realtors in real time</h4>
                       </Col>
                     </Row>
-                    <Row>
-                      <ListGroup>
-                        <ListGroupItem>350 messages</ListGroupItem>
-                        <ListGroupItem>10K emails</ListGroupItem>
-                        <ListGroupItem>24/7 Support</ListGroupItem>
-                      </ListGroup>
-                    </Row>
                   </CardBody>
-                  <CardFooter className="text-center">
-                    <Button className="btn-simple" color="info">
-                      Get plan
-                    </Button>
-                  </CardFooter>
                 </Card>
               </Col>
             </Row>
