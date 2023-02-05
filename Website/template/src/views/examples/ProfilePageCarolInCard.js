@@ -19,6 +19,7 @@ import React from "react";
 import classnames from "classnames";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
+import SwipeComponent from "components/SwipeComponent/SwipeComponent";
 // reactstrap components
 import {
   Button,
@@ -140,11 +141,12 @@ export default function ProfilePage1() {
               <CardBody>
                 <TabContent className="tab-space" activeTab={"link" + iconTabs}>
                   <TabPane tabId="link1">
-                  <UncontrolledCarousel
+              {/* <UncontrolledCarousel
                 items={carouselItems}
                 indicators={false}
                 autoPlay={false}
-              />
+              /> */}
+              <SwipeComponent />
                   </TabPane>
                   <TabPane tabId="link2">
                     <p>
