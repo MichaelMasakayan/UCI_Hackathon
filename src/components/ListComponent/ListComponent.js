@@ -1,6 +1,4 @@
 import React from "react";
-// react plugin used to create charts
-import { Line } from "react-chartjs-2";
 // reactstrap components
 import {
   Button
@@ -18,11 +16,10 @@ export default function ListComponent(props) {
             style={{maxWidth: "100px", maxHeight: "100px"}}
           />
           <div className="d-flex flex-column">
-            <span className="mr-auto">List item</span>
             <ul className="list-unstyled">
+              <li className="text-muted">Date: {props.houseDate}</li>
               <li className="text-muted">Price: {props.housePrice}</li>
               <li className="text-muted">Address: {props.houseAddress}</li>
-              <li className="text-muted">Date: {props.houseDate}</li>
             </ul>
           </div>
           <div className="ml-auto">
