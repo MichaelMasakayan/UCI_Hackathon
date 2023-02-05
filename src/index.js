@@ -15,6 +15,7 @@ import HouseDescription from "views/examples/HouseDescription.js";
 import ProfilePageCarolInCard from "views/examples/ProfilePageCarolInCard.js";
 import SwipePage from "views/examples/SwipePage";
 import ListPage from "views/examples/ListPage.js";
+import HousesDislikedPage from "views/examples/HousesDislikedPage.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -36,6 +37,10 @@ root.render(
        <Route
         path="/ListPage" 
         render={(props) => <ListPage {...props} />}
+      />
+      <Route
+        path="/HousesDisliked" 
+        render={(props) => <HousesDislikedPage {...props} />}
       />
       <Redirect from="/" to="/index" />
     </Switch>
