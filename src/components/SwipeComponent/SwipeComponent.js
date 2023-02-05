@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import TinderCard from 'react-tinder-card';
 import {
   Card,
@@ -9,6 +9,7 @@ import {
   Col,
   Row,
   Button,
+  UncontrolledCarousel
 } from 'reactstrap';
 import "./SwipeComponent.css";
 import ListComponent from 'components/ListComponent/ListComponent';
@@ -16,7 +17,6 @@ import { Link } from "react-router-dom";
 
 const cards = [
   {
-    image: require('assets/img/house1/house1pict3.png'),
     price: '$500,500',
     zIndex: 3,
     bedNum: 1,
@@ -25,9 +25,30 @@ const cards = [
     date: '05/03/2023',
     name: "House 3",
     address: "91011 Maple Blvd, Anytown USA 12345",
+    images: [
+      {
+        src: require("assets/img/house2/house2pic1.png"),
+        altText: "Slide 1",
+        caption: ""
+      },
+      {
+        src: require("assets/img/house2/house2pic2.png"),
+        altText: "Slide 2",
+        caption: ""
+      },
+      {
+        src: require("assets/img/house2/house2pic3.png"),
+        altText: "Slide 3",
+        caption: ""
+      },
+      {
+        src: require("assets/img/house2/house2pic4.png"),
+        altText: "Slide 4",
+        caption: ""
+      }
+    ],
   },
   {
-    image: require('assets/img/house1/house1pict2.png'),
     price: '$5,300,900',
     zIndex: 2,
     bedNum: 4,
@@ -36,9 +57,25 @@ const cards = [
     date: '05/10/2023',
     name: "House 2",
     address: "5678 Oak Ave, Anytown USA 12345",
+    images: [
+      {
+        src: require("assets/img/house1/house1pict1.png"),
+        altText: "Slide 1",
+        caption: ""
+      },
+      {
+        src: require("assets/img/house1/house1pict2.png"),
+        altText: "Slide 2",
+        caption: ""
+      },
+      {
+        src: require("assets/img/house1/house1pict3.png"),
+        altText: "Slide 3",
+        caption: ""
+      }
+    ],
   },
   {
-    image: require('assets/img/house1/house1pict1.png'),
     price: '$850,000',
     zIndex: 1,
     bedNum: 3,
@@ -47,7 +84,24 @@ const cards = [
     date: '05/04/2023',
     name: "House 1",
     address: "1234 Elm St, Anytown USA 12345",
-  },
+    images: [
+      {
+        src: require("assets/img/house3/house3pic1.png"),
+        altText: "Slide 1",
+        caption: ""
+      },
+      {
+        src: require("assets/img/house3/house3pic2.png"),
+        altText: "Slide 2",
+        caption: ""
+      },
+      {
+        src: require("assets/img/house3/house3pic3.png"),
+        altText: "Slide 3",
+        caption: ""
+      }
+    ],
+  }
 ];
 
 
@@ -65,8 +119,6 @@ export default function SwipeComponent() {
     } else if (cardsArray.length > 0 ){
       console.log("Has " + cardsArray.length + " elements")
     }
-
-    // setCardsArray((currCard) => [...cardsArray, currCard]);
   }, [cardsArray])
  
 
@@ -77,10 +129,12 @@ export default function SwipeComponent() {
       setCardsArray((direction) => [...cardsArray, "House " + String(counter)]);
     } else {
       setDislikedCardsArray((direction) => [...dislikedCardsArray, "House " + String(counter)])
+      setCounter(counter + 1);
     }
 
     // Increment counter by 1
     setCounter(counter + 1);
+    
   }
   
   const onCardLeftScreen = (myIdentifier) => {
@@ -89,31 +143,16 @@ export default function SwipeComponent() {
 
   const [ action, setAction ] = useState("");
 
-
   return (
     <>
     <div className="cardContainer">
       <link href='https://fonts.googleapis.com/css?family=Damion&display=swap' rel='stylesheet' />
       <link href='https://fonts.googleapis.com/css?family=Alatsi&display=swap' rel='stylesheet' />
       <div className="swipe-container">
-
-      {/* {Array.isArray(cardsArray)
-        ? cardsArray.map(element => {
-            // console.log(element)
-            return <h2>{element}</h2>;
-          })
-      : null} */}
-
-
         {cards.map((card, index) =>
           <TinderCard className='swipe' key={cards.image} onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} >
             <Card style={{ width: '30rem', height: '35rem', position: 'absolute' }}>
-                <img 
-                  src={card.image}
-                  key={card.image}
-                  alt={`Image ${index + 1}`}
-                  style={{ height: '25rem' }}>
-                </img>
+                <UncontrolledCarousel items={card.images} />
               <CardBody>
                 <CardTitle tag={'h2'} style={{ marginBottom: 20 }}>
                   <Row>
@@ -121,7 +160,7 @@ export default function SwipeComponent() {
                     {card.price}
                     </Col>
                     <Col className='text-right'>
-                    OH: {card.date}
+                    {card.date}
                     </Col>
                   </Row>
                 </CardTitle>
@@ -141,13 +180,12 @@ export default function SwipeComponent() {
                     </Col>
                   </Row>
                 </CardSubtitle>
-                <CardText>
+                <CardText >
                   Some quick example text to build on the card title and make up the bulk of the card‘s content.
                 </CardText>
               </CardBody>
             </Card>
           </TinderCard>
-          
         )}
       </div>
       <div className="list-container">
@@ -155,10 +193,9 @@ export default function SwipeComponent() {
         ? cardsArray.map(element => {
             return cards.map(card => {
               if (card.name === element){
-                return <ListComponent housePrice={card.price} houseAddress={card.address} houseDate={card.date} houseImg={card.image} />;
+                return <ListComponent housePrice={card.price} houseAddress={card.address} houseDate={card.date} houseImg={card.images[1].src} />;
               }
             });
-            // console.log(element)
           })
         : null}
 
@@ -174,9 +211,7 @@ export default function SwipeComponent() {
           
         </Link>
       </div>
-
     </div>    
-    
   </>
   )
 }

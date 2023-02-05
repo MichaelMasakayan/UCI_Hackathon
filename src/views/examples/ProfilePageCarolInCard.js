@@ -100,6 +100,7 @@ export default function ProfilePage1() {
       <ExamplesNavbar />
       <div className="wrapper">
         <div className="page-header">
+          
           {/* <SwipeComponent /> */}
           <img
             alt="..."
