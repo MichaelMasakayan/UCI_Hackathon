@@ -30,7 +30,7 @@ root.render(
         render={(props) => <SwipePage {...props} />}
       />
       <Route
-        path="/HousesDislikedPage" 
+        path="/HousesDisliked" 
         render={(props) => <HousesDislikedPage {...props} />}
       />
       <Route
