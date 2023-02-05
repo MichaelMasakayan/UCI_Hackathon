@@ -94,6 +94,7 @@ export default function ProfilePage1() {
       document.body.classList.toggle("profile-page");
     };
   }, []);
+  
   return (
     <>
       <ExamplesNavbar />
@@ -109,7 +110,7 @@ export default function ProfilePage1() {
             <countainer >
           <img alt="..."
             className="path"
-            src={require("assets/img/housecheck.jpg") }
+            src={require("assets/img/openhouse-logo.png") }
             style={{
               width: 500,
               verticalAlign: "middle"
@@ -117,10 +118,7 @@ export default function ProfilePage1() {
              />
             </countainer>
             <div className="section">
-              {/* carousel section */}
-              
               <SwipeComponent />
-
             </div>
           </div>
       </div>
