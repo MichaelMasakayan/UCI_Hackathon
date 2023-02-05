@@ -180,7 +180,7 @@ export default function HouseDescription() {
           </Container>
       </div>
         </div>
-        <Footer />
+  
       </div>
      
     </>

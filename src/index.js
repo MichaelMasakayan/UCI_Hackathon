@@ -42,6 +42,10 @@ root.render(
         path="/HousesDisliked" 
         render={(props) => <HousesDislikedPage {...props} />}
       />
+      <Route
+        path="/register-page"
+        render={(props) => <RegisterPage {...props} />}
+      />
       <Redirect from="/" to="/index" />
     </Switch>
   </BrowserRouter>

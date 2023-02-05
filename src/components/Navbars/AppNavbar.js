@@ -98,7 +98,7 @@ export default function AppNavbar() {
           </div>
           <Nav navbar>
             <NavItem className="p-0">
-              <NavLink tag={Link} to="/profile-page">
+              <NavLink tag={Link} to="/register-page">
                 <i className="tim-icons icon-single-02" />
                 <p className="d-lg-none d-xl-none">Profile</p>
               </NavLink>

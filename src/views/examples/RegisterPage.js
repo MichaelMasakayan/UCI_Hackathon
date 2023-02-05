@@ -41,6 +41,7 @@ import {
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import Footer from "components/Footer/Footer.js";
+import AppNavbar from "components/Navbars/AppNavbar";
 
 export default function RegisterPage() {
   const [squares1to6, setSquares1to6] = React.useState("");
@@ -77,7 +78,7 @@ export default function RegisterPage() {
   };
   return (
     <>
-      <ExamplesNavbar />
+      <AppNavbar />
       <div className="wrapper">
         <div className="page-header">
           <div className="page-header-image" />
@@ -213,7 +214,6 @@ export default function RegisterPage() {
             </Container>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );
