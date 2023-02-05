@@ -7,15 +7,10 @@ import "assets/scss/blk-design-system-react.scss";
 import "assets/demo/demo.css";
 
 import Index from "views/Index.js";
-import LandingPage from "views/examples/LandingPage.js";
-import RegisterPage from "views/examples/RegisterPage.js";
-import ProfilePage from "views/examples/ProfilePage.js";
-// adds the new page
-import HouseDescription from "views/examples/HouseDescription.js";
-import ProfilePageCarolInCard from "views/examples/ProfilePageCarolInCard.js";
-import SwipePage from "views/examples/SwipePage";
-import ListPage from "views/examples/ListPage.js";
-import HousesDislikedPage from "views/examples/HousesDislikedPage.js";
+import RegisterPage from "views/pages/RegisterPage.js";
+import HouseDescription from "views/pages/HouseDescription.js";
+import SwipePage from "views/pages/SwipePage";
+import HousesDislikedPage from "views/pages/HousesDislikedPage.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -27,19 +22,15 @@ root.render(
         render={(props) => <Index {...props} />}
       />
         <Route
-        path="/HouseDescription"
+        path="/house-description"
         render={(props) => <HouseDescription {...props} />}
       />
       <Route
         path="/swipe-page"
         render={(props) => <SwipePage {...props} />}
       />
-       <Route
-        path="/ListPage" 
-        render={(props) => <ListPage {...props} />}
-      />
       <Route
-        path="/HousesDisliked" 
+        path="/houses-disliked-page" 
         render={(props) => <HousesDislikedPage {...props} />}
       />
       <Route

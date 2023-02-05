@@ -1,10 +1,6 @@
-
-
 import React from "react";
-import classnames from "classnames";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
-import SwipeComponent from "components/SwipeComponent/SwipeComponent";
 // reactstrap components
 import {
   Button,
@@ -28,26 +24,29 @@ import {
   UncontrolledTooltip,
   UncontrolledCarousel
 } from "reactstrap";
-import Tabs from "views/IndexSections/Tabs.js";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import Footer from "components/Footer/Footer.js";
+import AppNavbar from "components/Navbars/AppNavbar.js";
 const carouselItems = [
   {
+    
     src: require("assets/img/house1/house1pict1.png"),
     altText: "Slide 1",
     caption: ""
+    
   },
   {
     src: require("assets/img/house1/house1pict2.png"),
     altText: "Slide 2",
     caption: ""
+   
+    
   },
   {
     src: require("assets/img/house1/house1pict3.png"),
     altText: "Slide 3",
     caption: ""
+    
   }
 ];
 
@@ -55,7 +54,7 @@ const carouselItems = [
   
 let ps = null;
 
-export default function ProfilePage1() {
+export default function HouseDescription() {
   const [iconTabs, setIconsTabs] = React.useState(1);
   const [textTabs, setTextTabs] = React.useState(4);
   const [tabs, setTabs] = React.useState(1);
@@ -79,14 +78,11 @@ export default function ProfilePage1() {
       document.body.classList.toggle("profile-page");
     };
   }, []);
-  
   return (
     <>
-      <ExamplesNavbar />
+     <AppNavbar />
       <div className="wrapper">
-        <div className="page-header">
-          
-          {/* <SwipeComponent /> */}
+        <div className="page-header " >
           <img
             alt="..."
             className="dots"
@@ -95,7 +91,7 @@ export default function ProfilePage1() {
             <countainer >
           <img alt="..."
             className="path"
-            src={require("assets/img/openhouse-logo.png") }
+            src={require("assets/img/path4.png") }
             style={{
               width: 500,
               verticalAlign: "middle"
@@ -103,21 +99,69 @@ export default function ProfilePage1() {
              />
             </countainer>
             <div className="section">
-              creates button 
-              <SwipeComponent />
-              <Button
-            className="btn-simple"
-            color="primary"
-            style={{margin: "200px"}}>
-            Click to view disliked houses
-            <i className="tim-icons icon-minimal-right" />
-          </Button>
-                        <div>  <Button color="info" style={{fontSize: '0.8em', width: '10em', height: '3em', padding: '0.5em', marginTop: "95%", }} onClick={console.log("clicked ")} href="http://localhost:3000/HouseDescription">More Info</Button></div>
-
-            </div>
-          </div>
+              {/* carousel section */}
+            <Container>
+              {/* this would add a small tittle before the carousel */}
+          {/* <div className="title">
+            <h3>Carousel</h3>
+          </div> */}
+          
+          <Row>
+            {/* md is the size of the column */}
+          <Col class="col align-self-start"lg="6">
+              <UncontrolledCarousel
+                items={carouselItems}
+                indicators={false}
+                autoPlay={false}
+              />
+            </Col>
+            
+           <Col className="col align-self-end">
+  <Card style={{padding:15}}>
+  <h1 className="text-white font-weight-light" style={{padding:20}}>8 Deodar, Irvine, CA 92604</h1>
+  <Row className="align-items-center ">
+    <Col >
+      <h3>Price: 2,399,900</h3> 
+    </Col>
+    <Col >
+      <h3>Date: 05/10/2023 </h3>
+    </Col>
+  </Row>
+  <Row className="align-items-center " style={{padding:10}}>
+    <Col >
+      <h6>BATHROOMS: 5.5</h6> 
+    </Col>
+    <Col >
+      <h6>BEDROOMS: 4 </h6>
+    </Col>
+    <Col >
+      <h6>SQ FT: 1557</h6>
+    </Col>
+  </Row>
+ 
+  <div className="">
+    <h3>Description: </h3>
+    <div >
+      <div>
+        <p  style={{padding:20}}>We're pleased to present the opportunity to acquire a gem in highly demanded Irvine, CA. Open layout with view from front door to backyard. Features include wood plank floors in the entire home, quartz countertops and custom island in the kitchen, stainless steel appliances, upgraded lighting throughout the home, all bedrooms have remote controlled ceiling fans with lights, dual-pane windows with strong sound barrier and insulation.</p>
+       <div> 
+        </div>
       </div>
-      
+    </div>
+  </div>
+
+  </Card>
+</Col>
+          </Row>
+        </Container>
+        
+        <Container>
+       
+          </Container>
+      </div>
+        </div>
+  
+      </div>
      
     </>
 

@@ -1,5 +1,3 @@
-import { useState, useEffect} from 'react';
-import TinderCard from 'react-tinder-card';
 import {
   Col,
   Row,
