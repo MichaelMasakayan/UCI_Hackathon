@@ -10,16 +10,19 @@ import {
   Row
 } from 'reactstrap';
 import "./SwipeComponent.css";
+import ListComponent from 'components/ListComponent/ListComponent';
 
 const cards = [
   {
-    image: require('assets/img/house1/house1pict1.png'),
-    price: '$850,000',
-    zIndex: 1,
-    bedNum: 3,
-    bathNum: 2,
-    sqFt: 1050,
-    date: '05/04/2023',
+    image: require('assets/img/house1/house1pict3.png'),
+    price: '$500,500',
+    zIndex: 3,
+    bedNum: 1,
+    bathNum: 1.5,
+    sqFt: 550,
+    date: '05/03/2023',
+    name: "House 3",
+    address: "91011 Maple Blvd, Anytown USA 12345",
   },
   {
     image: require('assets/img/house1/house1pict2.png'),
@@ -29,16 +32,20 @@ const cards = [
     bathNum: 5.5,
     sqFt: 1557,
     date: '05/10/2023',
+    name: "House 2",
+    address: "5678 Oak Ave, Anytown USA 12345",
   },
   {
-    image: require('assets/img/house1/house1pict3.png'),
-    price: '$500,500',
-    zIndex: 3,
-    bedNum: 1,
-    bathNum: 1.5,
-    sqFt: 550,
-    date: '05/03/2023',
-  }
+    image: require('assets/img/house1/house1pict1.png'),
+    price: '$850,000',
+    zIndex: 1,
+    bedNum: 3,
+    bathNum: 2,
+    sqFt: 1050,
+    date: '05/04/2023',
+    name: "House 1",
+    address: "1234 Elm St, Anytown USA 12345",
+  },
 ];
 
 
@@ -67,7 +74,6 @@ export default function SwipeComponent() {
       setCardsArray((direction) => [...cardsArray, "House " + String(counter)]);
       setCounter(counter + 1);
     }
-    
   }
   
   const onCardLeftScreen = (myIdentifier) => {
@@ -85,12 +91,12 @@ export default function SwipeComponent() {
       <link href='https://fonts.googleapis.com/css?family=Alatsi&display=swap' rel='stylesheet' />
       <div className="swipe-container">
 
-      {Array.isArray(cardsArray)
+      {/* {Array.isArray(cardsArray)
         ? cardsArray.map(element => {
             // console.log(element)
             return <h2>{element}</h2>;
           })
-      : null}
+      : null} */}
 
 
         {cards.map((card, index) =>
@@ -135,9 +141,25 @@ export default function SwipeComponent() {
               </CardBody>
             </Card>
           </TinderCard>
+          
         )}
       </div>
+      <div className="list-container">
+        {Array.isArray(cardsArray)
+        ? cardsArray.map(element => {
+            return cards.map(card => {
+              if (card.name === element){
+                return <ListComponent housePrice={card.price} houseAddress={card.address} houseDate={card.date} houseImg={card.image} />;
+              }
+            });
+            // console.log(element)
+          })
+        : null}
+      </div>
     </div>
+    
+
+    {/* <ListComponent houseName="House 1" /> */}
   </>
   )
 }
