@@ -17,7 +17,6 @@ import ListComponent from 'components/ListComponent/ListComponent';
 const cards = [
   {
     price: '$500,500',
-    zIndex: 3,
     bedNum: 1,
     bathNum: 1.5,
     sqFt: 550,
@@ -46,10 +45,10 @@ const cards = [
         caption: ""
       }
     ],
+    desc: 'Prime South Coast Metro location! Top floor corner-unit offers open floor plan graced by vaulted ceilings. This beautifully upgraded condo features two spacious en-suite bedrooms and a loft perfect for a home office or kids den. This home is meticulously maintained and turn key.',
   },
   {
-    price: '$5,300,900',
-    zIndex: 2,
+    price: '$2,399,900',
     bedNum: 4,
     bathNum: 5.5,
     sqFt: 1557,
@@ -73,10 +72,10 @@ const cards = [
         caption: ""
       }
     ],
+    desc: 'Features include wood plank floors in the entire home, quartz countertops and custom island in the kitchen, stainless steel appliances, upgraded lighting throughout the home, all bedrooms have remote controlled ceiling fans with lights, dual-pane windows with strong sound barrier and insulation.',
   },
   {
     price: '$850,000',
-    zIndex: 1,
     bedNum: 3,
     bathNum: 2,
     sqFt: 1050,
@@ -100,6 +99,71 @@ const cards = [
         caption: ""
       }
     ],
+    desc: 'This stunning 3 bedroom, 2 bathroom home in beautiful city of Santa Ana is a sight to behold! With 1600 square feet of living space and a beautifully landscaped backyard with a built-in tree house, this home is sure to check off every box.',
+  },
+  {
+    price: '$399,000',
+    bedNum: 1,
+    bathNum: 1,
+    sqFt: 700,
+    date: '05/05/2023',
+    name: "House 4",
+    address: "1122 1st St, Anytown USA 12345",
+    images: [
+      {
+        src: require("assets/img/house4/house4pic1.png"),
+        altText: "Slide 1",
+        caption: ""
+      },
+      {
+        src: require("assets/img/house4/house4pic2.png"),
+        altText: "Slide 2",
+        caption: ""
+      },
+      {
+        src: require("assets/img/house4/house4pic3.png"),
+        altText: "Slide 3",
+        caption: ""
+      },
+      {
+        src: require("assets/img/house4/house4pic4.png"),
+        altText: "Slide 4",
+        caption: ""
+      },
+      {
+        src: require("assets/img/house4/house4pic5.png"),
+        altText: "Slide 5",
+        caption: ""
+      }
+    ],
+    desc: 'Welcome to an excellent one-bedroom condo with a bonus room that feels like a second bedroom in a 24 hours security gated community, ready for you to move in. Which could be a great home or investment opportunity. The condo brings a lot of natural light through the windows.'
+  },
+  {
+    price: '$1,899,950',
+    bedNum: 5,
+    bathNum: 5,
+    sqFt: 3550,
+    date: '05/05/2023',
+    name: "House 5",
+    address: "7777 East Ave, Anytown USA 12345",
+    images: [
+      {
+        src: require("assets/img/house5/house5pic1.png"),
+        altText: "Slide 1",
+        caption: ""
+      },
+      {
+        src: require("assets/img/house5/house5pic2.png"),
+        altText: "Slide 2",
+        caption: ""
+      },
+      {
+        src: require("assets/img/house5/house5pic3.png"),
+        altText: "Slide 3",
+        caption: ""
+      }
+    ],
+    desc: 'This home is MILLS ACT APPROVED! and is designated landmark status which is a huge tax savings! Now is your chance to own a home in the coveted historic Floral Park neighborhood. It was designed by a prominent local mid-century architect, Philmer Ellerbroek. It is a one of a kind single level ranch home.',
   }
 ];
 
@@ -180,7 +244,7 @@ export default function SwipeComponent() {
                   </Row>
                 </CardSubtitle>
                 <CardText >
-                  Some quick example text to build on the card title and make up the bulk of the card‘s content.
+                  {card.desc}
                 </CardText>
               </CardBody>
             </Card>
