@@ -111,7 +111,7 @@ export default function HouseDescription() {
             <countainer >
           <img alt="..."
             className="path"
-            src={require("assets/img/housecheck.jpg") }
+            src={require("assets/img/path4.png") }
             style={{
               width: 500,
               verticalAlign: "middle"
@@ -136,45 +136,20 @@ export default function HouseDescription() {
               />
             </Col>
             
-            {/* <Col class="col align-self-end ">
-              <h1 className="text-white font-weight-light">
-                Bootstrap carousel
-              </h1>
-            <h5>Price: </h5> 
-            <h5>Address: </h5>
-            <h5>Address: </h5>
-            <div className="">
-                <span >Description: </span>
-              <div class="card text-center" >
-                <div class="card-body" style={{background: "#adb5bd"}} >
-                  <p class="card-text" >We're pleased to present the opportunity to acquire a gem in highly demanded Irvine, CA.</p>
-                  
-                  <button class="btn btn-primary">Text</button>
-                </div>
-              </div>
-              </div>
-              <Button
-                className="mt-5"
-                color="warning"
-                href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/alert">
-                See all components
-              </Button>
-            </Col>
-           */}
            <Col className="col align-self-end">
   <Card style={{padding:15}}>
-  <h1 className="text-white font-weight-light" style={{padding:20}}>Bootstrap carousel</h1>
+  <h1 className="text-white font-weight-light" style={{padding:20}}>8 Deodar, Irvine, CA 92604</h1>
   <Row className="align-items-center ">
-    <Col xs={6}>
-      <h5>Price: </h5> 
+    <Col >
+      <h3>Price: 2,399,900</h3> 
     </Col>
-    <Col xs={6}>
-      <h5>Date: </h5>
+    <Col >
+      <h3>Date: 05/10/2023 </h3>
     </Col>
   </Row>
   <Row  className="align-items-center"  style={{paddingTop:10}}>
-    <Col xs={6}>
-      <h5>Address: </h5>
+    <Col >
+      <h5>Address: 8 Deodar, Irvine, CA 92604</h5>
     </Col>
   </Row>
   <div className="">
@@ -182,7 +157,7 @@ export default function HouseDescription() {
     <span>Description: </span>
     <div >
       <div>
-        <p  style={{padding:20}}>We're pleased to present the opportunity to acquire a gem in highly demanded Irvine, CA.</p>
+        <p  style={{padding:20}}>We're pleased to present the opportunity to acquire a gem in highly demanded Irvine, CA. Open layout with view from front door to backyard. Features include wood plank floors in the entire home, quartz countertops and custom island in the kitchen, stainless steel appliances, upgraded lighting throughout the home, all bedrooms have remote controlled ceiling fans with lights, dual-pane windows with strong sound barrier and insulation.</p>
        <div> 
         </div>
       </div>
