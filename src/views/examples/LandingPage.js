@@ -36,8 +36,8 @@ import {
 // core components
 import HomeNavbar from "components/Navbars/HomeNavbar.js";
 import Footer from "components/Footer/Footer.js";
-
-import bigChartData from "variables/charts.js";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export default function LandingPage() {
   React.useEffect(() => {
@@ -91,16 +91,17 @@ export default function LandingPage() {
                 </h1>
                 
                 <div className="btn-wrapper mb-3">
+                <Link to="/ProfilePageCarolInCard">
                   <Button 
                     className="btn-simple" 
                     color="primary"
-                    href="#pablo"
+                    // href="/ProfilePageCarolInCard"
                     onClick={(e) => e.preventDefault()}
                     >
                     Find An Open House Near You!
                     <i className="tim-icons icon-minimal-right" />
                   </Button>
-
+                </Link>
                 </div>
                 <div className="btn-wrapper">
                   <div className="button-container">
@@ -159,6 +160,7 @@ export default function LandingPage() {
                 </div>
                 <br />
                 <br />
+                <br />
 
               </Col>
             </Row>
@@ -169,13 +171,13 @@ export default function LandingPage() {
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={require("assets/img/openhouse-house.png")}
+                      src={require("assets/img/house.png")}
                     />
                   </CardHeader>
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-white">Learn more about the homes in your area</h4>
+                        <h4 className="text-white">Learn more about the properties in your area</h4>
                       </Col>
                     </Row>
                   </CardBody>
@@ -187,7 +189,7 @@ export default function LandingPage() {
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={require("assets/img/openhouse-house.png")}
+                      src={require("assets/img/calendar.png")}
                     />
                   </CardHeader>
                   <CardBody>
@@ -205,7 +207,7 @@ export default function LandingPage() {
                     <img
                       alt="..."
                       className="img-center img-fluid"
-                      src={require("assets/img/openhouse-house.png")}
+                      src={require("assets/img/chat.png")}
                     />
                   </CardHeader>
                   <CardBody>
