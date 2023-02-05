@@ -99,6 +99,7 @@ export default function ProfilePage1() {
       <ExamplesNavbar />
       <div className="wrapper">
         <div className="page-header">
+          {/* <SwipeComponent /> */}
           <img
             alt="..."
             className="dots"
@@ -116,68 +117,11 @@ export default function ProfilePage1() {
             </countainer>
             <div className="section">
               {/* carousel section */}
-        <Container>
-       
-          </Container>
-      </div>
-        </div>
-        <div className="section section-tabs">
-      <Container>
-        <div className="title">
-          <h3 className="mb-3">Navigation Tabs</h3>
-        </div>
-        <Row>
-          <Col className="ml-auto mr-auto" md="10" xl="6">
-            <div className="mb-3">
-              <small className="text-uppercase font-weight-bold">
-                With icons
-              </small>
-            </div>
-            <Card>
-              <CardHeader>
-                <Nav className="nav-tabs-info" role="tablist" tabs>
-                </Nav>
-              </CardHeader>
-              <CardBody>
-                <TabContent className="tab-space" activeTab={"link" + iconTabs}>
-                  <TabPane tabId="link1">
-              {/* <UncontrolledCarousel
-                items={carouselItems}
-                indicators={false}
-                autoPlay={false}
-              /> */}
+              
               <SwipeComponent />
-                  </TabPane>
-                  <TabPane tabId="link2">
-                    <p>
-                      Completely synergize resource taxing relationships via
-                      premier niche markets. Professionally cultivate one-to-one
-                      customer service with robust ideas. <br />
-                      <br />
-                      Dynamically innovate resource-leveling customer service
-                      for state of the art customer service.
-                    </p>
-                  </TabPane>
-                  <TabPane tabId="link3">
-                    <p>
-                      Efficiently unleash cross-media information without
-                      cross-media value. Quickly maximize timely deliverables
-                      for real-time schemas. <br />
-                      <br />
-                      Dramatically maintain clicks-and-mortar solutions without
-                      functional solutions.
-                    </p>
-                  </TabPane>
-                </TabContent>
-              </CardBody>
-            </Card>
-          </Col>
-  
-        </Row>
-      </Container>
-      
-    </div>
-        <Footer />
+
+            </div>
+          </div>
       </div>
       
      

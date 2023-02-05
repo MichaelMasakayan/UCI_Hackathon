@@ -4,25 +4,21 @@ import "./SwipeComponent.css";
 
 const cards = [
   {
-    image: 'https://t4.ftcdn.net/jpg/02/79/95/39/360_F_279953994_TmVqT7CQhWQJRLXev4oFmv8GIZTgJF1d.jpg',
+    image: require("assets/img/house1/house1pict1.png"),
     color: '#55ccff',
     zIndex: 1,
   },
   {
-    image: 'https://img.icons8.com/color/452/GeeksforGeeks.png',
+    image: require("assets/img/house1/house1pict2.png"),
     color: '#e8e8e8',
     zIndex: 2,
   },
   {
-    image: 'https://img.icons8.com/color/452/GeeksforGeeks.png',
+    image: require("assets/img/house1/house1pict3.png"),
     color: '#0a043c',
     zIndex: 3,
   },
-  {
-    image: 'https://img.icons8.com/color/452/GeeksforGeeks.png',
-    color: 'black',
-    zIndex: 4,
-  }
+
 ];
 
 
@@ -30,16 +26,28 @@ export default function SwipeComponent() {
   const [ cardsArray, setCardsArray ] = useState([]);
   const [currCard, setCurrCard] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [dummyArr, setDummyArr] = useState([]);
+  const [counter, setCounter ] = useState(1);
 
-  // useEffect(() => {
-  //   setCardsArray((currCard) => [...cardsArray, "test"]);
-  // }, [])
+  useEffect(() => {
+    if (cardsArray.length === 0){
+      console.log("Empty")
+    } else if (cardsArray.length > 0 ){
+      console.log("Has " + cardsArray.length + " elements")
+    }
+
+    // setCardsArray((currCard) => [...cardsArray, currCard]);
+  }, [cardsArray])
  
 
   const onSwipe = (direction) => {
     console.log('You swiped: ' + direction)
     setAction(direction)
-    setCardsArray(...cardsArray, direction);
+    if (direction === "right" ){
+      setCardsArray((direction) => [...cardsArray, "House " + String(counter)]);
+      setCounter(counter + 1);
+    }
+    
   }
   
   const onCardLeftScreen = (myIdentifier) => {
@@ -47,6 +55,9 @@ export default function SwipeComponent() {
   }
 
   const [ action, setAction ] = useState("");
+
+
+  // const dummyArr = [];
   return (
     <>
     <div className="cardContainer">
@@ -56,6 +67,15 @@ export default function SwipeComponent() {
       <TinderCard className="swipe-container" onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['right', 'left']}>Hello, World!</TinderCard>
       <TinderCard className="swipe-container" onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} preventSwipe={['right', 'left']}>Hello, World!</TinderCard> */}
       <div className="swipe-container">
+
+      {Array.isArray(cardsArray)
+        ? cardsArray.map(element => {
+            // console.log(element)
+            return <h2>{element}</h2>;
+          })
+      : null}
+
+
         {cards.map((card, index) =>
           <TinderCard className='swipe' key={cards.image} onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')} >
             <div style={{ backgroundImage: 'url(' + card.image + ')', position:'relative'  }} className='card'>
@@ -75,6 +95,7 @@ export default function SwipeComponent() {
                   }}>
               </img>
             </div>
+            
           </TinderCard>
         )}
       </div>
