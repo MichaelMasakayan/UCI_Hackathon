@@ -32,12 +32,9 @@ import ProfilePage1 from "views/examples/ProfilePage1.js";
 import ProfilePageCarolInCard from "views/examples/ProfilePageCarolInCard.js";
 import SwipePage from "views/examples/SwipePage";
 import ListPage from "views/examples/ListPage.js";
-<<<<<<< HEAD
 import ListPage from "views/examples/ListPage.js";
-=======
 import SwipePage from "views/examples/SwipePage";
 
->>>>>>> 7e2462b4d39d28c67c7d09c0338da40f6dfc7aa7
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -74,18 +71,15 @@ root.render(
         path="/ListPage" 
         render={(props) => <ListPage {...props} />}
       />
-<<<<<<< HEAD
            <Route
         path="/ListPage" 
         render={(props) => <ListPage {...props} />}
       />
 
-=======
       <Route
         path="/swipe-page"
         render={(props) => <SwipePage {...props} />}
       />
->>>>>>> 7e2462b4d39d28c67c7d09c0338da40f6dfc7aa7
       <Redirect from="/" to="/components" />
     </Switch>
   </BrowserRouter>
