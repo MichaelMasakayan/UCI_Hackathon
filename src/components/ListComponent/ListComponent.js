@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 // reactstrap components
 import {
   Button
@@ -23,7 +24,7 @@ export default function ListComponent(props) {
             </ul>
           </div>
           <div className="ml-auto">
-            <Button color="info" style={{fontSize: '0.8em', width: '10em', height: '3em', padding: '0.5em'}}>Message</Button>
+            <Button color="info" tag={Link} to='\HouseDescription' style={{fontSize: '0.8em', width: '10em', height: '3em', padding: '0.5em'}}>Message</Button>
           </div>
         </li>
       </ul>

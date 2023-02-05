@@ -165,8 +165,10 @@ const cards = [
       }
     ],
     desc: 'This home is MILLS ACT APPROVED! and is designated landmark status which is a huge tax savings! Now is your chance to own a home in the coveted historic Floral Park neighborhood. It was designed by a prominent local mid-century architect, Philmer Ellerbroek. It is a one of a kind single level ranch home.',
+ 
   }
 ];
+
 
 
 export default function SwipeComponent() {
@@ -246,10 +248,12 @@ export default function SwipeComponent() {
                 </CardSubtitle>
                 <CardText >
                   {card.desc}
+                  
                 </CardText>
               </CardBody>
             </Card>
           </TinderCard>
+          
         )}
       </div>
       <div className="list-container">

@@ -163,7 +163,7 @@ export default function HouseDescription() {
            */}
            <Col className="col align-self-end">
   <Card style={{padding:15}}>
-  <h1 className="text-white font-weight-light">Bootstrap carousel</h1>
+  <h1 className="text-white font-weight-light" style={{padding:20}}>Bootstrap carousel</h1>
   <Row className="align-items-center ">
     <Col xs={6}>
       <h5>Price: </h5> 
@@ -178,12 +178,12 @@ export default function HouseDescription() {
     </Col>
   </Row>
   <div className="">
+    
     <span>Description: </span>
     <div >
       <div>
-        <p >We're pleased to present the opportunity to acquire a gem in highly demanded Irvine, CA.</p>
+        <p  style={{padding:20}}>We're pleased to present the opportunity to acquire a gem in highly demanded Irvine, CA.</p>
        <div> 
-        <button className="btn btn-primary" >Text</button>
         </div>
       </div>
     </div>
