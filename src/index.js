@@ -22,7 +22,7 @@ root.render(
         render={(props) => <Index {...props} />}
       />
         <Route
-        path="/house-description"
+        path="/HouseDescription"
         render={(props) => <HouseDescription {...props} />}
       />
       <Route
@@ -30,7 +30,7 @@ root.render(
         render={(props) => <SwipePage {...props} />}
       />
       <Route
-        path="/houses-disliked-page" 
+        path="/houses-disliked" 
         render={(props) => <HousesDislikedPage {...props} />}
       />
       <Route
