@@ -14,7 +14,7 @@ Our website helps home buyers schedule open houses, quickly contact realtors and
 
 Swipe right to "like" properties, RSVP for open houses, and contact real estate agents. Swipe left to "dislike" other property profiles, which include their location, photos, and a short bio.
 
-|                    ![](/imgs/searchPage.jpg)                    |
+|                    ![](/imgs/searchPage.gif)                    |
 | :-------------------------------------------------------------: |
 | _Swipe right to add to list. Swipe left to add to dislike list_ |
 
